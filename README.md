@@ -16,8 +16,7 @@ which takes a lot of time and likely exceeds local storage limits.
 
 Each numbered step above corresponds to a separate project:
 
-1.
-[crawler-namespace-to-rabbit](https://github.com/DotPodcast/crawler-namespace-to-rabbit)
+1. [crawler-namespace-to-rabbit](https://github.com/DotPodcast/crawler-namespace-to-rabbit)
 1. [crawler-zonefile-lookup](https://github.com/DotPodcast/crawler-zonefile-lookup)
 1. [crawler-zonefile-uri-crawler](https://github.com/DotPodcast/crawler-zonefile-uri-crawler)
 1. [crawler-elasticsearch-persistence](https://github.com/DotPodcast/crawler-elasticsearch-persistence)
