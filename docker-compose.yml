@@ -1,0 +1,35 @@
+version: "3"
+services:
+  rabbit:
+    image: rabbitmq:3.7.0-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.1.0
+    container_name: elasticsearch
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - http.cors.enabled=true
+      - "http.cors.allow-origin=*"
+      - "http.cors.allow-methods=OPTIONS, HEAD, GET, POST, PUT, DELETE"
+      - "http.cors.allow-headers=X-Requested-With,X-Auth-Token,Content-Type, Content-Length, Authorization"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - esnet
+
+volumes:
+  esdata:
+    driver: local
+
+networks:
+  esnet:
