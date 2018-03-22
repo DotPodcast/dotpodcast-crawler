@@ -21,6 +21,8 @@ Each numbered step above corresponds to a separate project:
 1. [crawler-zonefile-uri-crawler](https://github.com/DotPodcast/crawler-zonefile-uri-crawler)
 1. [crawler-elasticsearch-persistence](https://github.com/DotPodcast/crawler-elasticsearch-persistence)
 
+![Crawler Diagram](/crawler-diagram.png)
+
 ### Running the crawler locally
 
 In order to run the crawler locally, you'll need to be able to point to
